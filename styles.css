@@ -161,7 +161,7 @@ h1 {
 
 .commands {
   display: grid;
-  gap: 7px;
+  gap: 5px;
   margin-top: 8px;
   padding-left: 29px;
 }
@@ -202,6 +202,13 @@ code {
 
 .command-row button:hover {
   background: #c0e5dd;
+}
+
+.command-note {
+  color: #637279;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin: 0 0 5px;
 }
 
 @media (max-width: 820px) {

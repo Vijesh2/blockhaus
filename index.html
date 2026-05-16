@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blockhaus</title>
+    <link rel="icon" href="blockhaus.ico" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Git workflow reminders</p>
+          <h1>Blockhaus</h1>
+        </div>
+        <div class="progress-pill" id="progress" aria-live="polite">0/13</div>
+      </header>
+
+      <section class="workflow-grid" id="workflows" aria-label="Git workflows"></section>
+    </main>
+
+    <script src="app.js"></script>
   </body>
 </html>

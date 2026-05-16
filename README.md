@@ -1,36 +1,24 @@
 # blockhaus
 
-A small Windows-first Tauri + React desktop app with reminders for common git workflows.
+A small static HTML app with reminders for common git workflows.
 
 ## Workflows
 
 - Starting a new GitHub project and cloning it locally.
 - Pushing a local branch, opening a pull request, merging it, and updating local `main`.
 
-## Development
+## Run
 
-Prerequisites on Windows:
+Open `index.html` in a browser. No build tools or dependencies are required.
 
-- Node.js 18 or newer.
-- Rust through `rustup`.
-- Tauri prerequisites from the official setup guide.
+## Pin to the Windows taskbar
 
-If working inside WSL, use a Linux Node.js 18+ install. Windows `npm` cannot reliably install dependencies into a WSL UNC path.
+Create a shortcut with a target like:
 
-Install dependencies:
-
-```bash
-npm install
+```text
+"C:\Program Files\Google\Chrome\Application\chrome.exe" "C:\Users\vijes\dev\blockhaus\index.html"
 ```
 
-Run the desktop app:
+Then right-click the shortcut and choose **Pin to taskbar**.
 
-```bash
-npm run dev
-```
-
-Build the desktop app:
-
-```bash
-npm run build
-```
+To use the project icon, right-click the shortcut, open **Properties**, choose **Change Icon...**, and select `blockhaus.ico`.

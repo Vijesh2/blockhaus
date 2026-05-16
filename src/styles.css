@@ -1,0 +1,219 @@
+:root {
+  color: #172026;
+  background: #eef2f3;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 720px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 22px;
+}
+
+.app-header {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin: 0 auto 18px;
+  max-width: 1120px;
+}
+
+.eyebrow {
+  color: #5b6a71;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-bottom: 0;
+}
+
+.progress-pill {
+  align-items: center;
+  background: #17343d;
+  border-radius: 999px;
+  color: #ffffff;
+  display: flex;
+  font-size: 0.92rem;
+  font-weight: 800;
+  height: 42px;
+  justify-content: center;
+  min-width: 72px;
+  padding: 0 16px;
+}
+
+.workflow-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.workflow {
+  background: #ffffff;
+  border: 1px solid #d7e0e2;
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(31, 46, 53, 0.08);
+  overflow: hidden;
+}
+
+.workflow-heading {
+  border-bottom: 1px solid #e4eaec;
+  padding: 18px 18px 14px;
+}
+
+.workflow-heading h2 {
+  font-size: 1.08rem;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.workflow-heading p {
+  color: #607178;
+  font-size: 0.88rem;
+  line-height: 1.42;
+  margin-bottom: 0;
+}
+
+.step-list {
+  counter-reset: workflow-step;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px 14px;
+}
+
+.step {
+  counter-increment: workflow-step;
+  padding: 10px 6px;
+}
+
+.step + .step {
+  border-top: 1px solid #eef2f3;
+}
+
+.step-check {
+  align-items: flex-start;
+  cursor: pointer;
+  display: grid;
+  gap: 9px;
+  grid-template-columns: 20px minmax(0, 1fr);
+}
+
+.step-check input {
+  accent-color: #21766f;
+  height: 18px;
+  margin: 2px 0 0;
+  width: 18px;
+}
+
+.step-title {
+  color: #1d2a30;
+  font-size: 0.94rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.step-title::before {
+  color: #7a8b92;
+  content: counter(workflow-step) ". ";
+  font-weight: 800;
+}
+
+.step-detail {
+  color: #64757c;
+  font-size: 0.84rem;
+  line-height: 1.42;
+  margin: 6px 0 0 29px;
+}
+
+.commands {
+  display: grid;
+  gap: 7px;
+  margin-top: 8px;
+  padding-left: 29px;
+}
+
+.command-row {
+  align-items: center;
+  background: #18282d;
+  border: 1px solid #254149;
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) 72px;
+  min-height: 36px;
+  padding: 5px 5px 5px 10px;
+}
+
+code {
+  color: #ecf5f6;
+  display: block;
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.command-row button {
+  background: #d7efea;
+  border: 0;
+  border-radius: 5px;
+  color: #123b38;
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 800;
+  height: 26px;
+  padding: 0 8px;
+}
+
+.command-row button:hover {
+  background: #c0e5dd;
+}
+
+@media (max-width: 820px) {
+  body {
+    min-width: 320px;
+  }
+
+  .app-shell {
+    padding: 16px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}

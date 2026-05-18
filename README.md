@@ -5,7 +5,7 @@ A small static HTML app with reminders for common git workflows.
 ## Workflows
 
 - Starting a new GitHub project and cloning it locally.
-- Pushing a local branch, opening a pull request, merging it, and updating local `main`.
+- Pushing a local branch to a remote GitHub branch, opening a pull request, merging it into remote `main`, and updating local `main`.
 
 ## Run
 

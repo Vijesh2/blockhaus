@@ -2,7 +2,7 @@ const workflows = [
   {
     id: "new-project",
     title: "Start a new project",
-    description: "Create the remote first, clone it locally, then confirm tracking.",
+    description: "Create the remote GitHub repository first, clone it locally, then confirm tracking.",
     steps: [
       {
         title: "Create the repo on GitHub",
@@ -39,7 +39,7 @@ const workflows = [
           },
           {
             text: "git status",
-            note: "Checks the current branch and whether local changes are staged, unstaged, or untracked.",
+            note: "Checks the current local branch and whether local changes are staged, unstaged, or untracked.",
           },
         ],
       },
@@ -48,14 +48,14 @@ const workflows = [
   {
     id: "push-merge",
     title: "Push and merge a branch",
-    description: "Make a focused branch, push it, open a PR, then refresh main.",
+    description: "Make a focused local branch, push it to GitHub, open a PR, then refresh local main.",
     steps: [
       {
         title: "Check current status",
         commands: [
           {
             text: "git status",
-            note: "Checks the current branch and whether local changes are staged, unstaged, or untracked.",
+            note: "Checks the current local branch and whether local changes are staged, unstaged, or untracked.",
           },
         ],
       },
@@ -64,7 +64,7 @@ const workflows = [
         commands: [
           {
             text: "git switch -c feature-name",
-            note: "Creates a new branch and moves your working copy onto it. The -c flag tells Git to create the branch before switching.",
+            note: "Creates a new local branch and switches your local working tree to it. The -c flag tells Git to create the branch before switching.",
           },
         ],
       },
@@ -91,7 +91,7 @@ const workflows = [
         commands: [
           {
             text: "git push -u origin feature-name",
-            note: "Uploads the branch to GitHub. The -u flag sets upstream tracking so future git push and git pull commands know which remote branch to use.",
+            note: "Uploads your local branch to GitHub as a remote branch on origin. The -u flag links the local branch to that remote branch for future git push and git pull commands.",
           },
         ],
       },
@@ -100,7 +100,7 @@ const workflows = [
         commands: [
           {
             text: "gh pr create --web",
-            note: "Starts a pull request for the current branch. The --web flag opens GitHub's pull request form in the browser.",
+            note: "Starts a GitHub pull request from the remote branch that tracks your current local branch. The --web flag opens GitHub's pull request form in the browser.",
           },
         ],
       },
@@ -109,7 +109,7 @@ const workflows = [
         commands: [
           {
             text: "gh pr merge --squash --delete-branch",
-            note: "Merges the pull request. The --squash flag combines the branch into one commit, and --delete-branch removes the remote feature branch after merging.",
+            note: "Merges the GitHub pull request into the remote main branch. The --squash flag combines the branch into one commit, and --delete-branch removes the remote feature branch after merging.",
           },
         ],
       },
@@ -118,7 +118,7 @@ const workflows = [
         commands: [
           {
             text: "git switch main",
-            note: "Moves your working copy back to the main branch.",
+            note: "Switches your local working tree back to the local main branch.",
           },
           {
             text: "git pull",
